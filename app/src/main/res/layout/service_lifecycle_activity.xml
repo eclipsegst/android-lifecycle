@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhaolongzhong.lifecycle.service.ServiceLifecycleActivity">
+    
+    <Button
+        android:id="@+id/service_lifecycle_activity_start_service_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/spacing_20"
+        android:text="@string/start_service"/>
+
+    <Button
+        android:id="@+id/service_lifecycle_activity_stop_service_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/spacing_20"
+        android:text="@string/stop_service"/>
+
+
+</RelativeLayout>

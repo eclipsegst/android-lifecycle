@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhaolongzhong.lifecycle.MainActivity"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/main_activity_activity_lifecycle_text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_20"
+        android:text="@string/activity_lifecycle"
+        android:textSize="@dimen/text_20"/>
+
+    <TextView
+        android:id="@+id/main_activity_fragment_lifecycle_text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_activity_activity_lifecycle_text_view_id"
+        android:layout_margin="@dimen/spacing_20"
+        android:text="@string/fragment_lifecycle"
+        android:textSize="@dimen/text_20"/>
+
+    <TextView
+        android:id="@+id/main_activity_service_lifecycle_text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_activity_fragment_lifecycle_text_view_id"
+        android:layout_margin="@dimen/spacing_20"
+        android:text="@string/service_lifecycle"
+        android:textSize="@dimen/text_20"/>
+
+</RelativeLayout>
