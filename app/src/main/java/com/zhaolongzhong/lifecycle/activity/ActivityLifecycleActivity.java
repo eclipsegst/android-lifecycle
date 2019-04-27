@@ -3,6 +3,7 @@ package com.zhaolongzhong.lifecycle.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -56,46 +57,32 @@ public class ActivityLifecycleActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.d(TAG, "onRestoreInstanceState");
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume");
-
-        // For example, when we use the Camera
-        // We can get the Camera instance as the activity achieves full user focus.
-
-//        if (camera == null) {
-//            initializeCamera(); // Local method to handle camera init
-//        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause");
-
-        // For example, when we use the Camera
-        // We need to release the Camera since we don't need it when paused
-        // and other activities might need to use it.
-
-//        if (camera != null) {
-//            camera.release();
-//            camera = null;
-//        }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop");
-
-        // Save any process here
     }
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        // As the activity begins to stop, this method will be called,
-        // so it's a good time to save user's info
-
+        Log.d(TAG, "onSaveInstanceState");
         // Save the user's current game state
         savedInstanceState.putInt(STATE_SCORE, currentScore);
 
